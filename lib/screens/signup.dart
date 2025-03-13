@@ -102,7 +102,6 @@ class SignUp_Screen extends StatelessWidget {
       ),
     );
   }
-
   Widget _buildTextField(IconData icon, String hintText, {bool isPassword = false}) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),

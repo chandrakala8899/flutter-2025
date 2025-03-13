@@ -1,49 +1,34 @@
-
 import 'package:flutter/material.dart';
 
 class HomePageScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(
-      leading: Icon(Icons.arrow_back,color: Colors.black,),
-     ), 
-
-
-body: Padding(
-  padding: const EdgeInsets.all(16.0),
-  child: Form(
-    child: Column(
-      spacing: 20,
-       children: [
-      Center(child: Text('Sign Up',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700),)),
-    
-      TextFormField(
-        decoration: InputDecoration(
-
-          labelText: '  FullName',
-           hintText: 'Enter Your Name',
-           border: OutlineInputBorder()
+      appBar: AppBar(
+        leading: Icon(
+          Icons.home,
+          //color: Colors.black,
         ),
-        
+       backgroundColor: Colors.lime,
+        title:Text('Neo App'),
       ),
-      Container(
-        width: double.infinity,
-        child: ElevatedButton(
-          onPressed:  () {
-            // onPressed: _isValidForm ? _submitForm : null;
-            },
-           child: 
-           Text('Register')),
-      ),    
-       ]
+     
+      body: Container(
+        color: Colors.blue,
+      ),
+     // drawer: Drawer(),
+     endDrawer:Drawer(),
+    floatingActionButton: FloatingActionButton(onPressed:() {},
+    child: Icon(Icons.favorite ,color: Colors.red,),
+
     ),
-  ),
-),
+    bottomNavigationBar:  BottomNavigationBar(
+      items: [BottomNavigationBarItem(icon:Icon (Icons.home),label: 'Home'),
+      BottomNavigationBarItem(icon: Icon(Icons.settings),label: 'Settings')
+      ]
+    
+    ),
+      );
   
-    );
   }
-  
-  void setState(Null Function() param0) {}
 }
